@@ -1,0 +1,15 @@
+body{
+	;
+}
+
+li{
+	border: 2px solid red;
+}
+
+#physics {
+	background:yellow;
+} 
+
+.completed {
+	text-decoration: line-through;
+}

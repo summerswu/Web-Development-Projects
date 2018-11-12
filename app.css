@@ -1,0 +1,25 @@
+h1 {
+	color: rgba(12,333,232,0.3);
+	/*border-color: purple;
+	border-width: 5px;
+	border-style: solid;*/
+
+	border: 6px dashed purple;
+}
+
+li {
+	color: green;
+}
+
+h4 {
+	background: rgb(12,334,333);
+}
+
+body {
+	/*background: url(https://cdn-l-cyberpunk.cdprojektred.com/gallery/1080p/screen-Cyberpunk2077-Your_Chakra-s_Off_Babe-RGB-en.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;*/
+
+	background: pink;
+
+}
