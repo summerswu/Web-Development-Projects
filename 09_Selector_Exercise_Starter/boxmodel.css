@@ -1,0 +1,21 @@
+p{
+	
+
+	/*content */
+
+	width: 50%;
+
+	/*border*/
+
+	border: 2px solid blue;
+
+	/*Padding*/
+
+	padding-left: 40px;
+
+
+	/*margin*/
+
+	margin: 0 auto;
+	margin: 50px 20px;
+}

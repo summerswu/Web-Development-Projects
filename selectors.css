@@ -1,0 +1,30 @@
+* {
+	border: 1px solid lightgrey;
+}
+
+li a {
+	color: red;
+}
+
+/*descendent */
+
+h3 + ul {
+	border: 4px solid red;
+}
+
+/*adjacent*/ 
+
+a[href="http://www.facebook.com"]{
+	color: green;
+}
+}
+
+
+li:nth-of-type(2){
+	border: 4px solid red;
+}
+
+
+
+
+
