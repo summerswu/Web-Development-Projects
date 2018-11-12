@@ -1,0 +1,30 @@
+td{
+	width: 100px;
+	height: 100px;
+}
+
+.vertical{
+	border-left:2px solid black;
+	border-right:2px solid black;
+}
+
+.side{
+	border-top: 2px solid black;
+	border-bottom: 2px solid black;
+}
+
+.center{
+	border: 2px solid black;
+}
+
+table {
+	margin: auto;
+
+}
+
+h1 {
+	margin: 20px ;
+	text-align: center;
+}
+
+
