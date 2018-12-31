@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Selector Practice</title>
+</head>
+<body>
+	<h1>Hello</h1>
+
+
+	<h1>Goodbye</h1>
+
+	<ul>
+		<li id="highlight">List Item 1</li>
+		<li class="bolded">List Item 2</li>
+		<li class="bolded">List Item 3</li>
+	</ul>
+
+	<script type="text/javascript">
+		var tags = document.getElementsByClassName("bolded");
+		var tags = document.getElemenntsByTagName("Li");
+		var tags = document.querySelector("#highlight");//return the first match - not a list
+		var tags = document.querySelectorAll("li");//select all of this tag 
+		tag.style.color = "blue";
+
+		tag.classList.add("some-class");//adding some class to a selected class or id 
+		tag.classList.toggle("some-class");//toggling some style on and off 
+		tag.textContent;
+		tag.textContent = "blah blah blah";//use queryselector to change the text content, running the danger of getting ride of tags within an element - preserving 
+
+		tag.innerHTML; //keeping all the html element 
+		//try not to overwrite, there are otherways of interacting with the html element - render entered text into html
+
+		//Manipulating Attributes 
+		var link = document.querySelector("a");
+		link.getAttribute("href");
+		link.setAttribute("src", "www.bing.com");
+
+		
+
+
+
+	</script>
+</body>
+</html>

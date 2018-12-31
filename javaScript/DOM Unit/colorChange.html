@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>color change</title>
+	<style type="text/css">
+		.colorChange{
+			background-color: purple;
+		}
+		
+		body{
+			height: 100%;
+		}
+		
+	</style>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+</head>
+<body>
+	
+		
+			<button>Click Me</button>
+		
+	
+	<script type="text/javascript">
+		var button	= document.querySelector("button");
+		var color = document.querySelector("body");
+		document.addEventListener("click", function(){
+			color.classList.toggle("colorChange");
+		});
+	</script>
+</body>
+</html>
+

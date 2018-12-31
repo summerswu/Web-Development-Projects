@@ -25,3 +25,4 @@ var colors = ["red", "orange", "yellow", "green", "blue", "PURPLE"];
 colors.myForEach(function(color){
 	console.log(color);
 });
+

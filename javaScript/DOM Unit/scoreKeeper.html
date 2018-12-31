@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Score Keeper</title>
+	<style type="text/css">
+		.colorChange{
+			color: green;
+		}
+	
+	</style>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+	<h1><span id="score1">0</span> to <span id="score2">0</span></h1>
+
+	<p>Playing to: 5</p>
+
+	<input type="number" min="0">
+	<button id="p1">Player One</button>
+	<button id="p2">Player Two</button>
+	<button id="reset">Reset</button>
+
+	<script type="text/javascript">
+
+		var p1Score = 0;
+		var p2Score = 0;
+		var winScore = 5;//all num variables
+		var whoWon = 0;//keeping track for reset
+
+		
+		var paragraph = document.querySelector("p");
+		var	scoreBoard = document.querySelector("h1");
+		var	p1 = document.querySelector("#p1");
+		var	p2 = document.querySelector("#p2");
+		var	score1 = document.querySelector("#score1");
+		var	Score2 = document.querySelector("#score2");
+		var reset = document.querySelector("#reset");//all selectors
+
+		p1.addEventListener("click", function(){addOne(1);});
+		p2.addEventListener("click", function(){addOne(2);});
+		reset.addEventListener("click", clear);//listening for adding score and reset
+
+		$(document).ready(function(){
+		  $("input").bind("keyup mouseup", function(){
+		   clear();
+		   var num = document.querySelector("input").value;
+		   winScore = parseInt(num,10);
+		   paragraph.textContent = "Playing to: " + winScore;
+		  });
+		});
+
+		function addOne(value){
+			
+			if (p1Score===winScore || p2Score===winScore) {
+				return;
+			}
+			
+			if (value===1) {
+				p1Score += 1;
+			}
+			else{
+				p2Score += 1;
+			}
+			updateScore();
+			if (p1Score===winScore || p2Score===winScore) {
+				
+				if (p1Score>p2Score) {
+					score1.classList.add("colorChange");
+					whoWon = 1;
+				}
+
+				else {
+					score2.classList.add("colorChange");
+					whoWon = 2;
+				}
+			}
+
+		}//adding the score accordingly
+
+		function updateScore(){
+			score1.textContent = p1Score.toString();
+			score2.textContent = p2Score.toString();
+		}
+
+		function clear() {
+			p1Score = 0;
+			p2Score = 0;
+			updateScore();
+			if (whoWon===1) {
+				score1.classList.toggle("colorChange");
+				whoWon = 0;
+			}
+			else if (whoWon===2){
+				score2.classList.toggle("colorChange");
+				whoWon = 0;
+				
+			}
+
+			
+			paragraph.textContent = "Playing to: " + winScore;
+		}
+
+
+
+	</script>
+
+</body>
+</html>
