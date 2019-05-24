@@ -12,7 +12,7 @@ var User = require("./models/user");
 var Campground = require("./models/campground");
 var Comment = require("./models/comment");//user and model imports
 
-seedDB();
+//seedDB();
 
 mongoose.connect("mongodb://localhost:27017/yelp_camp",{ useNewUrlParser: true });//db connection
 

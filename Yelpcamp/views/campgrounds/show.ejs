@@ -18,6 +18,7 @@
                     <h4 class = "pull-right">9.00/night</h4>
                     <h4><a><%= campgrounds.name %></a></h4>
                     <p><%= campgrounds.description %></p>
+                    <p><em>Submitted by: </em><%= campgrounds.author.username %></p>
                     <div class ="well">
                         <div class = "text-right">
                             <p><a href = "/campgrounds/<%= campgrounds._id %>/comments/new" class = "btn btn-success">New Comment</a></p>
@@ -26,7 +27,7 @@
                         <% campgrounds.comments.forEach(function(comments){ %>
                              <div class = "row">
                                 <div class = "col-md-12">
-                                    <p><strong><%= comments.author %></strong>
+                                    <p><strong><%= comments.author.username %></strong>
                                     <span class = "pull-right">10 days ago</span>
                                      <p><%= comments.text %></p>
                                 </div>
