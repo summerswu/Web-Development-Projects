@@ -2,6 +2,8 @@ var express = require("express");
 var app = express();
 var bodyParser = require("body-parser");
 var mongoose = require("mongoose");//db and body parser
+var methodOverride = require("method-override");
+var flash = require("connect-flash");
 
 var passport = require("passport");
 var LocalStrategy = require("passport-local");//authen import 
@@ -12,6 +14,8 @@ var User = require("./models/user");
 var Campground = require("./models/campground");
 var Comment = require("./models/comment");//user and model imports
 
+
+
 //seedDB();
 
 mongoose.connect("mongodb://localhost:27017/yelp_camp",{ useNewUrlParser: true });//db connection
@@ -19,6 +23,8 @@ mongoose.connect("mongodb://localhost:27017/yelp_camp",{ useNewUrlParser: true }
 app.set("view engine", "ejs")
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static( __dirname + "/public"));
+app.use(methodOverride("_method"));
+app.use(flash());
 console.log( __dirname );//view engine and css locating
 
 app.use(require("express-session")({
@@ -35,6 +41,8 @@ passport.deserializeUser(User.deserializeUser());//authen user fuctions - black 
 
 app.use(function(req,res,next){
     res.locals.currentUser = req.user;
+    res.locals.error = req.flash("error");
+    res.locals.success = req.flash("success");
     next();
 });//propagate user
 

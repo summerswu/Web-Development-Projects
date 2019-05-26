@@ -6,6 +6,14 @@
     padding: 0;
 }
 
+.well {
+    margin-top: 20px;
+}
+
 .thumbnail .caption-full{
     padding: 9px;
+}
+
+#delete-form {
+    display: inline !important;
 }
